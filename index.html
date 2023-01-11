@@ -8,44 +8,94 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/style.css">
   </head>
   <body>
   
   <div class="jumbotron text-center">
     <h1>Weather Dashboard</h1>
   </div>
-    
-  <div class="container">
+    <section>
+  <div class="container search-container">
     <div class="row">
-      <div class="col-sm-4">
-        <h3>Search Title</h3>
-        <input type="text" placeholder="Search"> <br>       
-        <button type="button" class="btn">Search</button>      
+      <div class="col-sm-4" id="selector">
+        <form id="search">
+        <input type="text" id="search-term" placeholder="Search"> <br>       
+        <button type="submit" class="search-btn">Search</button> 
+     </form>     
       </div>
-      <div class="col-sm-8 weather">
-        <h2 class="city">Weather in Brighthoof</h2>
-        <div class="temp">51°C</div>
-        <img scr="" alt="" class="icon" />
-        <div class="description">Cloudy</div>
-        <div class="humidity">Humidity: 75%</div>
-        <div class="wind">7.8 km/h</div>
-
-      </div>
-
-    
     </div>
   </div>
+</section>
+  <div class="container previous-searches-conatiner">
 
-  <div class="user-history">
-    <div class="row">
-        <div class="past-choices">User History Section</div>
   </div>
-  </div>
+
+  <secion>
+    <div class="container weather-display-container">
+        <div class="main-card">
+            <div id="today-day"><span id="city-name">Anchorage</span> - <span id="todays-date"></span></div>
+            <br>
+            <div class="today-stats">
+                <div><img src="" id="todays-img"</div>
+                <span id="today-high"></span>
+                <span id="today-low"></span>
+                <span id="today-wind"></span>
+                <span id="today-humidity"></span>
+            </div>
+        </div>
+        <div class="five-day">
+            5 day forecast placeholder
+        </div>
+
+        <div class="container fiveday">
+
+        </div>
+        <div id="container daily-cards-container">
+            <div class="daily-card" data-fiveday="day0">
+              <p class="day"></p>
+              <hr>
+              <img src="" class="weather-img">
+              <p class="high"></p>
+              <p class="low"></p>
+              <p class="wind"></p>
+              <p class="humidity"></p>
+            <div class="daily-card" data-fiveday="day1">
+              <p class="day"></p>
+              <hr>
+              <img src="" class="weather-img">
+              <p class="high"></p>
+              <p class="low"></p>
+              <p class="wind"></p>
+              <p class="humidity"></p>
+            <div class="daily-card" data-fiveday="day2">
+              <p class="day"></p>
+              <hr>
+              <img src="" class="weather-img">
+              <p class="high"></p>
+              <p class="low"></p>
+              <p class="wind"></p>
+              <p class="humidity"></p>
+            <div class="daily-card" data-fiveday="day3">
+              <p class="day"></p>
+              <hr>
+              <img src="" class="weather-img">
+              <p class="high"></p>
+              <p class="low"></p>
+              <p class="wind"></p>
+              <p class="humidity"></p>
+            <div class="daily-card" data-fiveday="day4">
+              <p class="day"></p>
+              <hr>
+              <img src="" class="weather-img">
+              <p class="high"></p>
+              <p class="low"></p>
+              <p class="wind"></p>
+              <p class="humidity"></p>
+    </div>
+  </secion>
+
   
-  <div class="card-main">
-    <div class="row"></div>
-
-  </div>
     
 
     
@@ -53,7 +103,6 @@
   
 
 
-</head>
 <body>
     <script src="./assets/script.js"></script>
 </body>

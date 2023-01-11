@@ -14,3 +14,6 @@
     flex-direction: row;
 }
 
+.col-sm-8 {
+    color: blue;
+}
