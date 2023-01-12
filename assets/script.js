@@ -1,22 +1,35 @@
-function getInfo(){
-    var newName= document.querySelector("cityInput");
-    var cityName = document.querySelector("cityName");
+
+var currentLocation = document.getElementsByClassName('todays-stats')[0];
+var currentHigh = document.getElementById('today-high')[0];
+var currentLow = document.getElementById('today-low')[0];
+var currentWind = document.getElementById('today-wind')[0];
+var currentHumidity = document.getElementById('today-humidity')[0];
+
+
+
+
+
+
+    requestURL = `https://api.openweathermap.org/data/2.5/weather?q=Seattle&appid=e07f73fd554a9ab1da8c6467b8557d53`
+    fetch(requestURL)
+    .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
+      ;
+        for (let i = 0; i < data.length; i++) {
+            console.log(data);
+    }
+
+renderData = (location, forecast) => {
+    var currentWeather = forcast[0].weather[0];
+    
 }
-
-function searchWeather(city){
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=' +${newName}+'&units=metric&appid=e07f73fd554a9ab1da8c6467b8557d53`)
-    .then(response => response.json(){
-        return res.json(); 
-    }).then(function(data){
-        renderResults(data)
-    })}
-
-    searchWeather();
-
 
 searchForm.addEventListener("submit",function(e){
     e.preventDefault();
-    var cityToSearch = searchCityInput.value;
-    searchWeather(city);
+    var cityToSearch = cityName.value;
+    searchWeather(newName);
 
-})
+})})
