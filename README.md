@@ -6,6 +6,8 @@ This application searches an open weather API for current weather data for citie
 ## How to Use The Project
 Simply seach for a desiredcity and you will be shown the current weather conditions as well as a 5 day forcast.
 
+https://kraigmansfield.github.io/5-day-forecast/
+
 ## Credits
 Open Weather Map API
 
