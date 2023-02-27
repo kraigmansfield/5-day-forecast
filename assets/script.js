@@ -1,20 +1,17 @@
 
 var currentLocation = document.getElementsByClassName('todays-stats')[0];
 var currentHigh = document.getElementById('today-high')[0];
-var currentWind = document.getElementById('today-wind')[0];
-var currentHumidity = document.getElementById('today-humidity')[0];
-var searchFormInput = document.querySelector("#search-term")
-var searchForm = document.querySelector("search-btn")
-var currentDate = (new Date()).toLocaleDateString('en-US')
-
-
+// var searchFormInput = document.querySelector("#search-term");
+var searchForm = document.querySelector("search-btn");
+var currentDate = (new Date()).toLocaleDateString('en-US');
+var newName = document.getElementById('search-term');
+var cityName = cityName.innerHTML = newName.value;
 
 
 function searchWeather(city){   
   
-  var city = document.getElementById("city".value);
 
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=e07f73fd554a9ab1da8c6467b8557d53`)
+  fetch('api.openweathermap.org/data/2.5/forecast?q='+newName.value+'&appid=e07f73fd554a9ab1da8c6467b8557d53')
   .then(function(res){
     return res.json();
   }).then(function(data){
@@ -23,8 +20,6 @@ function searchWeather(city){
     var cityInput = document.getElementById("city".value);
     var cityName = (data.name);
     var high = (data.main.temp);
-    var wind = (data.main.wind.speed);
-    var humidity = (data.main.humidity);
 
     
   })
@@ -35,9 +30,14 @@ searchWeather("seattle");
 
 
 
-searchForm.addEventListener("submit",function(e){
-    e.preventDefault();
-    var cityToSearch = searchFormInput.value;
-    console.log(cityToSearch)
-
-})
+//Event Listeners on button click
+document.addEventListener("DOMContentLoaded", () => {
+  // Handling button click
+  document.querySelector(".search-btn").addEventListener("click", () => {
+      const searchedCity = document.querySelector('.search-term');
+      console.log(searchedCity.value);
+      if(searchedCity.value){
+          weatherForecast(searchedCity.value);
+      }       
+ }) 
+});
