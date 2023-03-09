@@ -14,93 +14,60 @@
   
   <div class="jumbotron text-center">
     <h1>Weather Dashboard</h1>
-  </div>
-    <section>
-  <div class="container search-container">
-    <div class="row">
-      <div class="col-sm-4" id="selector">
-        <form id="search">
-        <input type="text" id="search-term" placeholder="Search"> <br>       
-        <button type="submit" class="search-btn">Search</button> 
-     </form>     
-      </div>
-    </div>
-  </div>
-</section>
-  <div class="container previous-searches-conatiner">
+    <p id="inputContainer">City:</p>
+    <input type="text" id="search-city"> 
+    <button" id="searchBtn">Search</button>
 
-  </div>
+    <section class="CityDet">
+      <section class="TextCont" id="today">
+          <h3 id="cityName"> <span id="Date"></span></h3>
+          <p id="Temp"></p>
+      </section>
+  </section>
 
-  <secion>
-    <div class="container weather-display-container">
-        <div class="main-card">
-            <div id="today-day"><span id="city-name">Anchorage</span> - <span id="todays-date"></span></div>
-            <br>
-            <div class="today-stats">
-                <div><img src="" id="todays-img"</div>
-                <span id="today-high"></span>
-            </div>
-        </div>
-        <div class="five-day">
-            5 day forecast placeholder
-        </div>
+  <section class="weatherCards">
+    <h3 id="fiveDayForecast1"></h3>
+    <section class="borderCards">
+      <p id= "Temp1"></p>
+      <p id="Day1"></p>
+    </section>
+  </section>
 
-        <div class="container fiveday">
+  <section class="weatherCards">
+    <h3 id="fiveDayForecast2"></h3>
+    <section class="borderCards">
+      <p id= "Temp2"></p>
+      <p id="Day2"></p>
+    </section>
+  </section>
 
-        </div>
-        <div id="container daily-cards-container">
-            <div class="daily-card" data-fiveday="day0">
-              <p class="day"></p>
-              <hr>
-              <img src="" class="weather-img">
-              <p class="high"></p>
-              <p class="low"></p>
-              <p class="wind"></p>
-              <p class="humidity"></p>
-            <div class="daily-card" data-fiveday="day1">
-              <p class="day"></p>
-              <hr>
-              <img src="" class="weather-img">
-              <p class="high"></p>
-              <p class="low"></p>
-              <p class="wind"></p>
-              <p class="humidity"></p>
-            <div class="daily-card" data-fiveday="day2">
-              <p class="day"></p>
-              <hr>
-              <img src="" class="weather-img">
-              <p class="high"></p>
-              <p class="low"></p>
-              <p class="wind"></p>
-              <p class="humidity"></p>
-            <div class="daily-card" data-fiveday="day3">
-              <p class="day"></p>
-              <hr>
-              <img src="" class="weather-img">
-              <p class="high"></p>
-              <p class="low"></p>
-              <p class="wind"></p>
-              <p class="humidity"></p>
-            <div class="daily-card" data-fiveday="day4">
-              <p class="day"></p>
-              <hr>
-              <img src="" class="weather-img">
-              <p class="high"></p>
-              <p class="low"></p>
-              <p class="wind"></p>
-              <p class="humidity"></p>
-    </div>
-  </secion>
+  <section class="weatherCards">
+    <h3 id="fiveDayForecast3"></h3>
+    <section class="borderCards">
+      <p id= "Temp3"></p>
+      <p id="Day3"></p>
+    </section>
+  </section>
 
-  
-    
+  <section class="weatherCards">
+    <h3 id="fiveDayForecast4"></h3>
+    <section class="borderCards">
+      <p id= "Temp4"></p>
+      <p id="Day4"></p>
+    </section>
+  </section>
 
-    
+  <section class="weatherCards">
+    <h3 id="fiveDayForecast5"></h3>
+    <section class="borderCards">
+      <p id= "Temp5"></p>
+      <p id="Day5"></p>
+    </section>
+  </section>
 
-  
 
 
 <body>
-    <script src="./assets/script.js"></script>
 </body>
+  <script src="./assets/script.js"></script>
 </html>
